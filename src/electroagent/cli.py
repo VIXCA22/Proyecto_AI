@@ -7,7 +7,7 @@ import pandas as pd
 
 from .agente import AgentePrediccion
 from .datos import fetch_cence_demand, read_demand_csv, write_demand_csv
-from .visualization import forecast_figure, validation_comparison_figure
+from .visualization import validation_comparison_figure
 
 
 def cmd_download(args: argparse.Namespace) -> None:
@@ -27,7 +27,6 @@ def cmd_run(args: argparse.Namespace) -> None:
     metrics_path = out_dir / "metrics.csv"
     ranking_path = out_dir / "model_ranking.csv"
     cleaned_path = out_dir / "cleaned.csv"
-    figure_path = out_dir / "forecast.html"
     comparison_path = out_dir / "comparacion_cence_modelo.csv"
     comparison_figure_path = out_dir / "comparacion_cence_modelo.pdf"
 
@@ -35,7 +34,6 @@ def cmd_run(args: argparse.Namespace) -> None:
     result.selection.metrics.to_csv(metrics_path, index=False)
     result.selection.ranking.to_csv(ranking_path, index=False)
     result.cleaned.to_csv(cleaned_path, index=False)
-    forecast_figure(result.cleaned, result.forecast).write_html(figure_path)
     result.validation_comparison.to_csv(comparison_path, index=False)
     validation_comparison_figure(result.validation_comparison).write_image(comparison_figure_path)
 
@@ -44,7 +42,6 @@ def cmd_run(args: argparse.Namespace) -> None:
     print(f"Predicción guardada en {forecast_path}")
     print(f"Métricas guardadas en {metrics_path}")
     print(f"Datos limpios guardados en {cleaned_path}")
-    print(f"Gráfico guardado en {figure_path}")
     print(f"Comparación CENCE-modelo guardada en {comparison_figure_path}")
 
 

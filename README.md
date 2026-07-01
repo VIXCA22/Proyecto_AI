@@ -88,5 +88,4 @@ Además, se genera una gráfica de comparación entre la demanda real del CENCE 
 - `outputs/cleaned.csv`: datos regularizados y limpios.
 - `outputs/forecast.csv`: predicción generada.
 - `outputs/metrics.csv`: métricas de validación.
-- `outputs/forecast.html`: visualización de la predicción.
 - `outputs/comparacion_cence_modelo.pdf`: comparación gráfica entre CENCE real y predicción.
