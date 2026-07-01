@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \emergencystretch=3em
@@ -72,11 +73,12 @@ También se generó una gráfica para comparar los datos reales del CENCE con lo
 
 En la gráfica se observa que el modelo sigue la tendencia principal de la curva real: baja en horas de menor consumo y sube cuando la demanda aumenta. Sin embargo, no siempre llega exactamente al mismo valor, sobre todo en cambios rápidos o picos de consumo.
 
-La comparación se guardó en:
-
-\begin{itemize}
-  \item \texttt{outputs/comparacion\_cence\_modelo.pdf}
-\end{itemize}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\linewidth]{../outputs/comparacion_cence_modelo.pdf}
+  \caption{Comparación CENCE real vs predicción del agente}
+  \label{fig:comparacion_cence}
+\end{figure}
 
 \section*{6. Conclusión}
 
