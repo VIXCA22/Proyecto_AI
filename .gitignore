@@ -8,6 +8,9 @@ src/*.egg-info/
 outputs/*.csv
 outputs/*.html
 outputs_context/
+reportes/*.aux
+reportes/*.log
+reportes/*.out
 datos/raw/*.csv
 datos/raw/*.json
 datos/processed/*.csv
