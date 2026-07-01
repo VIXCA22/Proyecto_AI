@@ -1,12 +1,11 @@
 \documentclass[11pt]{article}
 \usepackage[margin=2.5cm]{geometry}
-\usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \emergencystretch=3em
 
-\title{Reporte del Proyecto 2\\Agente para predicción de demanda eléctrica}
-\author{Kenneth Vizcaíno Jiménez}
+\title{Reporte del Proyecto 2}
+\author{Agente para predicción de demanda eléctrica}
 \date{1/7/2026}
 
 \begin{document}
@@ -73,12 +72,11 @@ También se generó una gráfica para comparar los datos reales del CENCE con lo
 
 En la gráfica se observa que el modelo sigue la tendencia principal de la curva real: baja en horas de menor consumo y sube cuando la demanda aumenta. Sin embargo, no siempre llega exactamente al mismo valor, sobre todo en cambios rápidos o picos de consumo.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.95\linewidth]{../outputs/comparacion_cence_modelo.pdf}
-  \caption{Comparación CENCE real vs predicción del agente}
-  \label{fig:comparacion_cence}
-\end{figure}
+La comparación se guardó en:
+
+\begin{itemize}
+  \item \texttt{outputs/comparacion_cence_modelo.pdf}
+\end{itemize}
 
 \section*{6. Conclusión}
 
