@@ -36,7 +36,7 @@ def detect_rolling_mad_anomalies(
     min_delta_mw: float = 40.0,
     relative_delta: float = 0.08,
 ) -> pd.Series:
-    """Detect point anomalies with rolling median absolute deviation."""
+    """Detecta puntos anómalos comparando cada valor con su entorno."""
     values = pd.to_numeric(series, errors="coerce")
     rolling_median = values.rolling(window=window, center=True, min_periods=max(8, window // 4)).median()
     residual = (values - rolling_median).abs()
@@ -58,7 +58,7 @@ def clean_demand(
     anomaly_window: int = 96,
     anomaly_threshold: float = 5.0,
 ) -> tuple[pd.DataFrame, CleaningReport]:
-    """Regularize timestamps, flag anomalies and interpolate corrected demand."""
+    """Ordena la serie, marca anomalías y corrige la demanda."""
     rows_in = len(df)
     regularized, missing_timestamps = regularize_frequency(df, frequency=frequency)
     values = pd.to_numeric(regularized[target_col], errors="coerce")

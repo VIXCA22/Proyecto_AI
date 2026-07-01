@@ -3,16 +3,15 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "electroforecast-agent"
+name = "agente-prediccion-electrica"
 version = "0.1.0"
-description = "Agente para analisis y prediccion de demanda electrica con datos CENCE."
+description = "Agente para análisis y predicción de demanda eléctrica con datos CENCE."
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = [
     "numpy>=1.26",
     "pandas>=2.2",
     "requests>=2.32",
-    "scikit-learn>=1.5",
     "plotly>=5.24",
     "streamlit>=1.37",
     "pytest>=8.3",

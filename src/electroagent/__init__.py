@@ -1,4 +1,4 @@
-"""Electroforecast Agent package."""
+"""Paquete del agente de predicción de demanda eléctrica."""
 
 __all__ = ["__version__"]
 

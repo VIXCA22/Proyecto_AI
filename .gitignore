@@ -8,8 +8,8 @@ src/*.egg-info/
 outputs/*.csv
 outputs/*.html
 outputs_context/
-data/raw/*.csv
-data/raw/*.json
-data/processed/*.csv
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+datos/raw/*.csv
+datos/raw/*.json
+datos/processed/*.csv
+!datos/raw/.gitkeep
+!datos/processed/.gitkeep
