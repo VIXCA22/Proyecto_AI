@@ -58,8 +58,7 @@ En la gráfica se observa que el modelo sigue la tendencia principal de la curva
 
 La comparación se guardó en:
 
-- `outputs/comparacion_cence_modelo.html`
-- `reportes/comparacion_cence_modelo.html`
+- `outputs/comparacion_cence_modelo.pdf`
 
 ## 6. Conclusión
 

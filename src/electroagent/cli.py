@@ -29,7 +29,7 @@ def cmd_run(args: argparse.Namespace) -> None:
     cleaned_path = out_dir / "cleaned.csv"
     figure_path = out_dir / "forecast.html"
     comparison_path = out_dir / "comparacion_cence_modelo.csv"
-    comparison_figure_path = out_dir / "comparacion_cence_modelo.html"
+    comparison_figure_path = out_dir / "comparacion_cence_modelo.pdf"
 
     result.forecast.to_csv(forecast_path, index=False)
     result.selection.metrics.to_csv(metrics_path, index=False)
@@ -37,7 +37,7 @@ def cmd_run(args: argparse.Namespace) -> None:
     result.cleaned.to_csv(cleaned_path, index=False)
     forecast_figure(result.cleaned, result.forecast).write_html(figure_path)
     result.validation_comparison.to_csv(comparison_path, index=False)
-    validation_comparison_figure(result.validation_comparison).write_html(comparison_figure_path)
+    validation_comparison_figure(result.validation_comparison).write_image(comparison_figure_path)
 
     print(f"Método de predicción: {result.selection.name}")
     print(result.selection.ranking.rename(columns={"model": "metodo"}).to_string(index=False))
